@@ -32,7 +32,7 @@ const authors = [
 
 const state = {
     turnData: getTurnData(authors),
-    highlight: ''
+    highlight: 'none'
 };
 
 function onAnswerSelected(answer) {
@@ -42,7 +42,7 @@ function onAnswerSelected(answer) {
 }
 
 function getTurnData(authors) {
-    const allBooks = authors.reduce(function (p, c, i) {
+    const allBooks = authors.reduce(function (p, c) {
         return p.concat(c.books);
     }, []);
 
